@@ -1,0 +1,40 @@
+{
+  "api": 2,
+  "id": "dev.campusdemo.auto-recharge",
+  "name": "自动充值",
+  "version": "1.5.0-beta.4",
+  "revision": 13,
+  "capability": "page",
+  "community": {
+    "profile": ["campus", "room", "phone"],
+    "campusSession": true,
+    "campusRecharge": true,
+    "storage": true,
+    "timer": true,
+    "backgroundLogin": true
+  },
+  "shortcuts": {
+    "settings": {
+      "title": "自动充值",
+      "detail": "设置常规、空调、洗浴与校园网规则",
+      "icon": "refresh"
+    },
+    "fees": {
+      "electric": {
+        "title": "自动充值",
+        "detail": "设置常规电费和空调电费规则",
+        "icon": "refresh"
+      },
+      "water": {
+        "title": "自动充值",
+        "detail": "设置洗浴余额规则",
+        "icon": "refresh"
+      },
+      "network": {
+        "title": "自动充值",
+        "detail": "设置校园网费规则",
+        "icon": "refresh"
+      }
+    }
+  }
+}
