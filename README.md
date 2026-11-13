@@ -23,3 +23,14 @@ node scripts/pack.mjs --source hfp --key /path/to/private.pem --cert /path/to/ce
 ~~~
 
 产物位于 dist。覆盖升级需使用原发布证书。使用其他签名构建的包，能否使用扣款能力取决于宿主信任策略。
+
+## 发布新版本
+
+更新 `hfp/manifest.json` 的 `version` 和 `revision`，提交改动。在 [Actions](../../actions/workflows/build-plugin.yml) 手动运行 `signed_candidate` 可以先验签和验证安装。审核通过后，在本地 `main` 分支给对应提交打标签，例如：
+
+~~~sh
+git tag -a v1.5.0-beta.4 -m "Release v1.5.0-beta.4"
+git push --atomic origin main refs/tags/v1.5.0-beta.4
+~~~
+
+公开仓库的标签构建会在验签后把 HFP 和校验文件发布到 [Releases](../../releases)。带 `-beta` 后缀的版本标记为预发行。
