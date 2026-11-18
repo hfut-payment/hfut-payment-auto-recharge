@@ -167,8 +167,7 @@ function handle(event) {
             const meetsThresholds = cardAfterSettlement > rule.limits.cardAfterSettlementAbove &&
                 balanceMilli < rule.limits.belowMilli;
             const amount = parseMoney(rule.amount, 2);
-            const debitWarning = card < amount ? "校园卡实际余额不足，未提交充值"
-                : cardAfterSettlement < amount ? "计入待圈存后余额不足，未提交充值" : "";
+            const debitWarning = cardAfterSettlement < amount ? "计入待圈存后余额不足，未提交充值" : "";
             if (!background) return notice(title + " · 条件预览",
                 "校园卡圈存后 ¥" + (cardAfterSettlement / 100).toFixed(2) + "（实际 ¥" + (card / 100).toFixed(2) +
                 (cardPending < 0 ? " − " : " + ") + "¥" + (Math.abs(cardPending) / 100).toFixed(2) + "）\n" +

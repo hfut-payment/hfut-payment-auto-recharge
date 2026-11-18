@@ -2,8 +2,8 @@
   "api": 2,
   "id": "dev.campusdemo.auto-recharge",
   "name": "自动充值",
-  "version": "1.5.0-beta.4",
-  "revision": 13,
+  "version": "1.5.0-beta.5",
+  "revision": 14,
   "capability": "page",
   "community": {
     "profile": ["campus", "room", "phone"],
